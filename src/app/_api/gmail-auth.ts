@@ -1,7 +1,7 @@
 import { google } from 'googleapis'
 import * as fs from 'fs-extra'
 import * as path from 'path'
-import credentials from '@/config/client_secret_1018478576567-b4gnrarc52oe0bl09o22qibo1a16r10j.apps.googleusercontent.com.json'
+import credentials from '@/config/gmail-api-client-secret.json'
 
 /**
  * API that authenticate gmail

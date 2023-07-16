@@ -8,14 +8,7 @@ export default function Privacy() {
         <div className="flex justify-between px-4 mx-auto max-w-screen-xl ">
             <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
                 <header className="mb-4 lg:mb-6 not-format">
-                    <address className="flex items-center mb-6 not-italic">
-                        <div className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
-                            <Image width="300" height="500" className="mr-4 w-16 h-16 rounded-full" src="/firegame512.png" alt="Jese Leos"/>
-                            <div>
-                            <h2>updated 06/03/2023</h2>
-                            </div>
-                        </div>
-                    </address>
+
                     <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">Privacy Policy</h1>
                 </header>
                 <p>This Privacy Policy governs the manner in which Nathan Yao ("I" or "me") collects, uses, maintains, and discloses information collected from users of my mobile game Fire Safety Game ("the Game") available on the Apple App Store.</p>
