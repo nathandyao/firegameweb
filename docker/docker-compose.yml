@@ -1,0 +1,25 @@
+# docker-compose.yml
+version: '3'
+services:
+  firegameweb-dev:
+    container_name: firegameweb-dev-cntr
+    build: 
+        context: .
+        dockerfile: ./Dockerfile.dev
+    ports:
+        - "3622:3000"
+    image: firegameweb-dev
+    user: ${CURRENT_UID}
+    working_dir: ${CONTAINER_DEV_HOME}/firegameweb
+    stdin_open: true
+    volumes:
+      - ${HOST_DEV_HOME}:${CONTAINER_DEV_HOME}
+      - ${HOST_DATA_HOME}:${CONTAINER_DATA_HOME}
+    tty: true
+    command: tail -f /dev/null
+    networks:
+      main:
+        aliases:
+          - net-firegameweb-dev
+networks:
+  main:

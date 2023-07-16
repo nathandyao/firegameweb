@@ -1,0 +1,30 @@
+FROM node:lts-alpine3.16
+
+EXPOSE 3000-10000
+
+RUN apk update \
+    && apk add \
+      bash \
+      curl \
+      vim \
+      busybox-extras
+      
+ENV TZ=America/Los_Angeles
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# accept the arguments from .Env (via compose file)
+ARG PUID 
+ARG PGID
+ARG USER
+
+RUN yarn install --silent
+
+RUN npm install -g typescript ts-node serve
+
+# Add the group (if not existing) 
+# then add the user to the numbered group 
+
+RUN addgroup -g ${PGID} ${USER} || true && \
+    adduser -u ${PUID} -G `getent group ${PGID} | cut -d: -f1` --shell /bin/sh ${USER} || true 
+
+USER ${USER}
