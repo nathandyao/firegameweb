@@ -57,7 +57,7 @@ const Home = () => {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+            Find in-depth information about Fire Safety Game for kids.
           </p>
         </Link>
 
@@ -74,7 +74,7 @@ const Home = () => {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+            We want hear from you!
           </p>
         </a>
 
@@ -91,7 +91,7 @@ const Home = () => {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
+            We respect your privacy.
           </p>
         </a>
 
