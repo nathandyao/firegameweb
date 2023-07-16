@@ -14,7 +14,8 @@
 
 # production
 /build
-/src/config
+/src/config/gmail-api-client-secret.json
+/src/config/token.json
 # misc
 .DS_Store
 *.pem
